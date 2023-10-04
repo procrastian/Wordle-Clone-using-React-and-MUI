@@ -1,7 +1,8 @@
+import "./letter.css";
 export default function Letter() {
   return (
-    <div>
-      <h3>Letter</h3>
-    </div>
+    <>
+      <div className="letter">X</div>
+    </>
   );
 }
