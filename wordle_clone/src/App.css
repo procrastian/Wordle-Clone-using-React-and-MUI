@@ -14,3 +14,7 @@
   background-color: teal;
   display: grid;
 }
+
+li {
+  list-style: none;
+}
