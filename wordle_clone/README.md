@@ -1,12 +1,112 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
+
+<!-- PROJECT LOGO -->
+<br />
+<div align="center">
+  <a href="https://github.com/procrastian/wordle_clone">
+    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  </a>
+<h3 align="center">Wordle Clone</h3>
+  <p align="center">
+    A clone of the Wordle app built using my knowledge of React and MUI.
+    <br />
+    <a href="https://github.com/procrastian/wordle_clone"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/procrastian/wordle_clone">View Demo</a>
+  </p>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li>
+      <a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li>
+      <a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#prerequisites">Prerequisites</a></li>
+        <li><a href="#installation">Installation</a></li>
+      </ul>
+    </li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
+
+<!-- ABOUT THE PROJECT -->
+
+## About The Project
+
+[![Product Name Screen Shot][product-screenshot]](https://example.com)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Built With
+
+- [![React][React.js]][React-url]
+- [![JavaScript][JavaScript.js]][JavaScript-url]
+- [![HTML5][HTML5.js]][HTML5-url]
+- [![CSS3][CSS3.js]][CSS3-url]
+- [![Nodejs][Nodejs.js]][Nodejs-url]
+- [![MaterialUI][MaterialUI.js]][MaterialUI-url]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+
+## Getting Started
+
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+This is an example of how to list things you need to use the software and how to install them.
+
+- npm
+  ```sh
+  npm install npm@latest -g
+  ```
+
+### Installation
+
+1. Clone the repo
+   ```sh
+   git clone https://github.com/procrastian/wordle_clone.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+
+### Packages
+
+- react-simple-keyboard
+   <https://www.npmjs.com/package/react-simple-keyboard>
+- MUI
+- MUI Icons
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- USAGE EXAMPLES -->
+
+## Usage
+
+### Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+#### Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+##### `npm start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -14,57 +114,72 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+_For more examples, please refer to the [Documentation](https://example.com)_
 
-### `npm run build`
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<!-- ROADMAP -->
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Roadmap
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Aims
 
-### `npm run eject`
+- to have an app that allows a user to play the game `wordle` an unlimited amount of times
+- have the app generate random 5 letter words each time it is played
+- have the ability for the user to restart the game with a new word
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Plan
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- have the app display to the user:
+  - 5 letter spaces to guess in
+  - if a given letter is in an incorrect position in the word
+  - if a given letter is in the correct position in the word
+  - if a given letter is not in the word
+  - which letters have been guessed by the user
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<img src="images/../src/images/Figma_screenshot.png" alt="figma plan" width="400" height="400">
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- nice to haves:
+  - the ability for the user to select harder difficulty with fewer than 6 guesses
+  - how to play pop-up explaining the game at the start
+  - have the app recognise key strokes for letters
+  - dark mode/light mode
 
-## Learn More
+### Progress
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [x] Implimenting a keyboard that the user can input guesses with
+- [ ] Keep track of any user submitted guesses
+- [ ] Display the grid for guessed letters
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+See the [open issues](https://github.com/procrastian/wordle_clone/issues) for a full list of proposed features (and known issues).
 
-### Code Splitting
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<!-- CONTACT -->
 
-### Analyzing the Bundle Size
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+[![LinkedIn][linkedin-shield]][linkedin-url]
+Ian Grantham - dev.iangrantham@gmail.com
+Project Link: [https://github.com/procrastian/wordle_clone](https://github.com/procrastian/wordle_clone)
 
-### Making a Progressive Web App
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<!-- MARKDOWN LINKS & IMAGES -->
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=0A66C2
+[linkedin-url]: https://linkedin.com/in/dev-ian-grantham
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
+[JavaScript.js]: https://img.shields.io/badge/JavaScript-20232A?style=for-the-badge&logo=javascript
+[JavaScript-url]: https://www.javascript.com/
+[HTML5.js]: https://img.shields.io/badge/HTML5-20232A?style=for-the-badge&logo=html5&logoColor=E34F26
+[HTML5-url]: https://html.com/
+[CSS3.js]: https://img.shields.io/badge/CSS3-20232A?style=for-the-badge&logo=css3&logoColor=1572B6
+[CSS3-url]: https://developer.mozilla.org/en-US/docs/Web/CSS
+[Nodejs.js]: https://img.shields.io/badge/node.js-20232A?style=for-the-badge&logo=nodedotjs&logoColor=339933
+[Nodejs-url]: https://nodejs.org/en
+[MaterialUI.js]: https://img.shields.io/badge/mui-20232A?style=for-the-badge&logo=mui&logoColor=007FFF
+[MaterialUI-url]: https://mui.com/
