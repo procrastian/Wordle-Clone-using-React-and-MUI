@@ -1,4 +1,4 @@
-import Letter from "./Letter";
+import Letter from "../Letter/Letter";
 import { useState } from "react";
 export default function Guesses() {
   const initialState = ["", "", "", "", ""];

@@ -1,6 +1,6 @@
 import "./App.css";
-import Guesses from "./components/Guesses.js";
-import Keyboard from "./components/Keyboard.js";
+import Guesses from "./Components/Guesses.js";
+import Keyboard from "./Components/Keyboard.js";
 
 function App() {
   return (
