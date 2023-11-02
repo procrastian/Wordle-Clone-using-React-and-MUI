@@ -1,11 +1,10 @@
+import KeyboardApp from "../Keyboard/Keyboard.js";
 import "./App.css";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-
+      <KeyboardApp />
     </div>
   );
 }
-
-export default App;
