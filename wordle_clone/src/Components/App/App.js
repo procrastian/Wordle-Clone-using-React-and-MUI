@@ -1,4 +1,4 @@
-import KeyboardApp from "../Keyboard/Keyboard.js";
+import KeyboardApp from "../Keyboard/KeyboardApp.js";
 import "./App.css";
 
 export default function App() {
