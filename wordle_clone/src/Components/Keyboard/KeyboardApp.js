@@ -40,6 +40,23 @@ export default function KeyboardDisplay() {
         layoutName={layout}
         onChange={onChange}
         onKeyPress={onKeyPress}
+        layout={{
+          default: [
+            "Q W E R T Y U I O P",
+            "A S D F G H J K L",
+            "{bksp} Z X C V B N M {enter}",
+          ]
+        }}
+        buttonTheme={[
+          {
+            class: "hg-red",
+            buttons: "Q W E R T Y q w e r t y"
+          },
+          {
+            class: "hg-highlight",
+            buttons: "Q q"
+          }
+        ]}
       />
     </div>
   );
