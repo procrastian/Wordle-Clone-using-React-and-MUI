@@ -1,15 +1,14 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import Keyboard from "react-simple-keyboard";
 import "react-simple-keyboard/build/css/index.css";
 
-export default function KeyboardDisplay() {
-  const [input, setInput] = useState("");
+export default function KeyboardDisplay({guessState, setGuessState}) {
 
   const keyboard = useRef();
 
-  const onChange = (input) => {
-    setInput(input);
-    console.log("Input changed", input);
+  const onChange = (guessState) => {
+    setGuessState(guessState);
+    console.log("Input changed", guessState);
   };
 
   const onKeyPress = (button) => {
@@ -17,15 +16,15 @@ export default function KeyboardDisplay() {
   };
 
   const onChangeInput = (event) => {
-    const input = event.target.value;
-    setInput(input);
-    keyboard.current.setInput(input);
+    const guessState = event.target.value;
+    setGuessState(guessState);
+    keyboard.current.setGuessState(guessState);
   };
 
   return (
     <div className="keyboard">
-      <input
-        value={input}
+      <guessState
+        value={guessState}
         placeholder={"Tap on the virtual keyboard to start"}
         onChange={onChangeInput}
       />
