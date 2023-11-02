@@ -150,8 +150,13 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 ### Progress
 
 - [x] Implimenting a keyboard that the user can input guesses with
-- [ ] Keep track of any user submitted guesses
-- [ ] Display the grid for guessed letters
+- [x] Keep track of any user submitted guesses using state
+  - [ ] User able to submit a guess and check against target word
+- [x] Display the grid for guessed letters
+  - [ ] Show 6 total available guesses
+- [ ] words API to generate target random 5 letter word (<https://www.wordsapi.com/docs/?javascript#random-words>?)
+- [ ] Animation of letters when guess is made
+- [ ] Colour coding for letter placements when guess made
 
 See the [open issues](https://github.com/procrastian/wordle_clone/issues) for a full list of proposed features (and known issues).
 
