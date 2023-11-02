@@ -7,19 +7,13 @@ export default function KeyboardDisplay({guessState, setGuessState, answerState,
   const keyboard = useRef();
 
   const onChange = (guessState) => {
-    setGuessState(guessState);
     console.log("Input changed", guessState);
+    setGuessState(guessState);
   };
 
   const onKeyPress = (button) => {
     console.log("Button pressed", button);
     if(button === "{enter}") handleEnter(guessState)
-  };
-
-  const onChangeInput = (event) => {
-    const guessState = event.target.value;
-    setGuessState(guessState);
-    keyboard.current.setGuessState(guessState);
   };
 
   const handleEnter = (guess) => {
@@ -30,11 +24,6 @@ export default function KeyboardDisplay({guessState, setGuessState, answerState,
 
   return (
     <div className="keyboard">
-      <guessState
-        value={guessState}
-        placeholder={"Tap on the virtual keyboard to start"}
-        onChange={onChangeInput}
-      />
       <Keyboard
         keyboardRef={(r) => (keyboard.current = r)}
         onChange={onChange}
