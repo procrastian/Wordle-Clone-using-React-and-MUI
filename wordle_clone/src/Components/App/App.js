@@ -3,16 +3,23 @@ import GuessesGrid from "../Guesses/GuessesGrid.js";
 import KeyboardDisplay from "../Keyboard/KeyboardApp.js";
 import "./App.css";
 
-const initialState = ['', '', '', '', '']
+const initialGuessState = ["", "", "", "", ""];
+const initialAnswerState = [];
 
 export default function App() {
-  
-  const [guessState, setGuessState] = useState(initialState)
-  console.log(guessState)
+  const [guessState, setGuessState] = useState(initialGuessState);
+  const [answerState, setAnswerState] = useState(initialAnswerState);
+  console.log('app level guessState', guessState);
+  console.log('app level answerState', answerState)
   return (
     <div className="App">
-      <GuessesGrid guessState={guessState}/>
-      <KeyboardDisplay guessState={guessState} setGuessState={setGuessState}/>
+      <GuessesGrid guessState={guessState} answerState={answerState} />
+      <KeyboardDisplay
+        guessState={guessState}
+        setGuessState={setGuessState}
+        answerState={answerState}
+        setAnswerState={setAnswerState}
+      />
     </div>
   );
 }

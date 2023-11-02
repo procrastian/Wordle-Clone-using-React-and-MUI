@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import Keyboard from "react-simple-keyboard";
 import "react-simple-keyboard/build/css/index.css";
 
-export default function KeyboardDisplay({guessState, setGuessState}) {
+export default function KeyboardDisplay({guessState, setGuessState, answerState, setAnswerState}) {
 
   const keyboard = useRef();
 
@@ -13,6 +13,7 @@ export default function KeyboardDisplay({guessState, setGuessState}) {
 
   const onKeyPress = (button) => {
     console.log("Button pressed", button);
+    if(button === "{enter}") handleEnter(guessState)
   };
 
   const onChangeInput = (event) => {
@@ -20,6 +21,12 @@ export default function KeyboardDisplay({guessState, setGuessState}) {
     setGuessState(guessState);
     keyboard.current.setGuessState(guessState);
   };
+
+  const handleEnter = (guess) => {
+    if(guess.length < 5) return "guess must be 5 letters"
+    console.log('guessed:', guess)
+    setAnswerState(...answerState, guess)
+  }
 
   return (
     <div className="keyboard">
