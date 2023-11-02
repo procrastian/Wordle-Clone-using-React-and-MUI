@@ -19,19 +19,6 @@ export default function KeyboardApp() {
 
     onKeyPress = (button) => {
       console.log("Button pressed", button);
-
-      /**
-       * If you want to handle the shift and caps lock buttons
-       */
-      if (button === "{shift}" || button === "{lock}") this.handleShift();
-    };
-
-    handleShift = () => {
-      let layoutName = this.state.layoutName;
-
-      this.setState({
-        layoutName: layoutName === "default" ? "shift" : "default",
-      });
     };
 
     onChangeInput = (event) => {
@@ -62,16 +49,9 @@ export default function KeyboardApp() {
             layoutName={this.state.layoutName}
             layout={{
               default: [
-                "q w e r t y u i o p",
-                "a s d f g h j k l",
-                "{enter} z x c v b n m {bksp}",
-              ],
-              shift: [
-                "~ ! @ # $ % ^ & * ( ) _ + {bksp}",
-                "{tab} Q W E R T Y U I O P { } |",
-                '{lock} A S D F G H J K L : " {enter}',
-                "{shift} Z X C V B N M < > ? {shift}",
-                ".com @ {space}",
+                "Q W E R T Y U I O P",
+                "A S D F G H J K L",
+                "{enter} Z X C V B N M {bksp}",
               ],
             }}
             buttonTheme={[
