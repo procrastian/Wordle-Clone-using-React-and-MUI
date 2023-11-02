@@ -6,7 +6,7 @@ export default function App() {
   return (
     <div className="App">
       <BasicGrid />
-      <KeyboardDisplay id="keyboard" />
+      <KeyboardDisplay />
     </div>
   );
 }
