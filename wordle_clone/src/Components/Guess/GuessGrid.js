@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useState } from "react";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import { styled } from "@mui/material/styles";
@@ -12,6 +13,9 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 export default function GuessGrid() {
+  const defaultState = ['A', 'B', 'C', 'D', "E"];
+  const [letterState, setLetterState] = useState(defaultState);
+
   return (
     <Grid item xs={6}>
       <Item>
@@ -27,7 +31,9 @@ export default function GuessGrid() {
                       backgroundColor: (theme) =>
                         theme.palette.mode === "dark" ? "#1A2027" : "#fff",
                     }}
-                  />
+                  >
+                    {defaultState[value]}
+                  </Paper>
                 </Grid>
               ))}
             </Grid>
