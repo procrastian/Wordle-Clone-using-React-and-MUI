@@ -102,6 +102,8 @@ This is an example of how to list things you need to use the software and how to
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+The following API is used to generate random 5 letter target words for the game <https://random-word-api.vercel.app/>.
+
 #### Available Scripts
 
 In the project directory, you can run:
@@ -154,7 +156,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
   - [ ] User able to submit a guess and check against target word
 - [x] Display the grid for guessed letters
   - [ ] Show 6 total available guesses
-- [ ] words API to generate target random 5 letter word (<https://www.wordsapi.com/docs/?javascript#random-words>?)
+- [x] <https://random-word-api.vercel.app/> used to generate 5 letter word
 - [ ] Animation of letters when guess is made
 - [ ] Colour coding for letter placements when guess made
 
