@@ -2,6 +2,7 @@ import { useState } from "react";
 import GuessesGrid from "../Guesses/GuessesGrid.js";
 import KeyboardDisplay from "../Keyboard/KeyboardApp.js";
 import "./App.css";
+import ResetButton from "../Button/Button.js";
 
 const initialGuessState = ["", "", "", "", ""];
 const initialAnswerState = [];
@@ -20,6 +21,7 @@ export default function App() {
         answerState={answerState}
         setAnswerState={setAnswerState}
       />
+      <ResetButton />
     </div>
   );
 }
