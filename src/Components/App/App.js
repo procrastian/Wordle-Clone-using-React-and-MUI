@@ -10,8 +10,10 @@ const initialAnswerState = [];
 export default function App() {
   const [guessState, setGuessState] = useState(initialGuessState);
   const [answerState, setAnswerState] = useState(initialAnswerState);
+  const [targetWord, setTargetWord] = useState('')
   console.log('app level guessState', guessState);
   console.log('app level answerState', answerState)
+  console.log('app level targetWord', targetWord)
   return (
     <div className="App">
       <GuessesGrid guessState={guessState} answerState={answerState} />
@@ -21,7 +23,7 @@ export default function App() {
         answerState={answerState}
         setAnswerState={setAnswerState}
       />
-      <ResetButton />
+      <ResetButton setTargetWord={setTargetWord}/>
     </div>
   );
 }
