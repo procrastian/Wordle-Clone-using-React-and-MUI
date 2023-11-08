@@ -4,7 +4,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/procrastian/wordle_clone">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="./src/images/Wordle_Clone.gif" alt="Logo" width="80" height="80">
   </a>
 <h3 align="center">Wordle Clone</h3>
   <p align="center">
