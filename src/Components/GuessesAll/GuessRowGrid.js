@@ -1,13 +1,13 @@
 import * as React from "react";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import GuessGrid from "../Guess/GuessGrid";
+import SingleGuessGrid from "../GuessSingle/SingleGuessGrid";
 
-export default function GuessesGrid({guessState}) {
+export default function GuessRowGrid({guessState}) {
   return (
     <Box sx={{ width: "100%" }}>
       <Grid rowSpacing={10} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-        <GuessGrid guessState={guessState}/>
+        <SingleGuessGrid guessState={guessState}/>
       </Grid>
     </Box>
   );

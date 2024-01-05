@@ -1,3 +1,11 @@
+:root {
+  --unguessed-letter-color: hsl(195, 2%, 51%, 100%);
+  --incorrect-letter-color: hsl(240, 2%, 23%, 100%);
+  --incorrect-position-color: hsl(50, 51%, 47%, 100%);
+  --correct-position-color: hsl(115, 29%, 43%, 100%);
+  --background-color: hsl(240, 3%, 7%, 100%);
+}
+
 .App {
   text-align: center;
   display: grid;
@@ -18,3 +26,4 @@
 li {
   list-style: none;
 }
+
