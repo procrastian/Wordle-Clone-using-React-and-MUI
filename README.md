@@ -153,7 +153,8 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 - [x] Implimenting a keyboard that the user can input guesses with
 - [x] Keep track of any user submitted guesses using state
-  - [ ] User able to submit a guess and check against target word
+  - [X] User able to submit a guess and check against target word
+  - [ ] Notify user of correct guess
 - [x] Display the grid for guessed letters
   - [ ] Show 6 total available guesses
 - [x] <https://random-word-api.vercel.app/> used to generate 5 letter word

@@ -8,6 +8,7 @@ const initialGuessState = ["", "", "", "", ""];
 const initialAnswerState = [];
 
 export default function App() {
+  const [totalGuessesState, setTotalGuessesState] = useState(['','','','','',''])
   const [guessState, setGuessState] = useState(initialGuessState);
   const [answerState, setAnswerState] = useState(initialAnswerState);
   const [targetWord, setTargetWord] = useState('')
@@ -20,7 +21,8 @@ export default function App() {
 
   return (
     <div className="App">
-      <GuessesGrid guessState={guessState} answerState={answerState} />
+      {totalGuessesState.map((guessObj, index) => <GuessesGrid guessState={guessState} answerState={answerState} />)}
+        
       <KeyboardDisplay
         guessState={guessState}
         setGuessState={setGuessState}
