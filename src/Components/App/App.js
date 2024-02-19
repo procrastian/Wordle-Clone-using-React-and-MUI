@@ -36,6 +36,12 @@ export default function App() {
         --> turn keyboard letter dark grey
   */
 
+  let targetWordArray = targetWord[0].split('')
+
+  for (let i=0; i < guessState.length; i++) {
+    if(guessState[i]===targetWordArray[i]) {console.log("matching Letter position!")} 
+  }
+
   return (
     <div className="App">
       <GuessRowGrid
