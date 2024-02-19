@@ -158,6 +158,8 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [x] Display the grid for guessed letters
   - [ ] Show 6 total available guesses
 - [x] <https://random-word-api.vercel.app/> used to generate 5 letter word
+- [ ] Check if the submitted word matches the dictionary used to generate targets
+  - [ ] Notify user is invalid word is input
 - [ ] Animation of letters when guess is made
 - [ ] Colour coding for letter placements when guess made
 
