@@ -1,51 +1,41 @@
 import { useState } from "react";
-import GuessesGrid from "../Guesses/GuessesGrid.js";
 import KeyboardDisplay from "../Keyboard/KeyboardApp.js";
-import "./App.css";
 import ResetButton from "../Button/Button.js";
+import CardGrid from "../Cards/CardGrid.js";
 
-const initialGuessState = ["", "", "", "", ""];
-const initialAnswerState = [];
+import "./App.css";
+
+const attemptArray = Array.from(Array(5), () => ({
+  letter: "",
+  cardColor: "lightgrey",
+}));
+const cardsArray = Array.from(Array(6), () => attemptArray);
+console.log("cardsArray", cardsArray);
+
+const initialTargetWord = "GUESS";
+const initialCardRenderState = [cardsArray];
 
 export default function App() {
-  const [totalGuessesState, setTotalGuessesState] = useState([
-    "",
-    "",
-    "",
-    "",
-    "",
-    "",
-  ]);
-  const [guessState, setGuessState] = useState(initialGuessState);
-  const [currentGuessNumberState, setCurrentGuessNumberState] = useState(0);
-  const [answerState, setAnswerState] = useState(initialAnswerState);
-  const [targetWord, setTargetWord] = useState("");
+  const [targetWord, setTargetWord] = useState(initialTargetWord);
+  const [cardRenderState, setCardRenderState] = useState(
+    initialCardRenderState
+  );
+  const [guessedWord, setGuessedWord] = useState([]);
+  const [attemptNumberState, setAttemptNumberState] = useState(1);
 
-  console.log("app level guessState", guessState);
-  console.log("app level answerState", answerState);
-  console.log("app level targetWord", targetWord);
-
-  if (answerState === targetWord.toString())
+  if (guessedWord === targetWord.toString())
     return console.log("correct word guessed!");
-
-  // keep track of which row of the available guesses we are on. Start at 1 and when a guess is made, increment
 
   return (
     <div className="App">
-      {totalGuessesState.map((guessObj, index) => (
-        <GuessesGrid
-          currentGuessNumberState={currentGuessNumberState}
-          guessState={guessState}
-          answerState={answerState}
-        />
-      ))}
+      <CardGrid cardRenderState={cardRenderState} />
       <KeyboardDisplay
-        guessState={guessState}
-        setGuessState={setGuessState}
-        answerState={answerState}
-        setAnswerState={setAnswerState}
-        currentGuessNumberState={currentGuessNumberState}
-        setCurrentGuessNumberState={setCurrentGuessNumberState}
+        cardRenderState={cardRenderState}
+        setCardRenderState={setCardRenderState}
+        guessedWord={guessedWord}
+        setGuessedWord={setGuessedWord}
+        attemptNumberState={attemptNumberState}
+        setAttemptNumberState={setAttemptNumberState}
       />
       <ResetButton setTargetWord={setTargetWord} />
     </div>

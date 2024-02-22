@@ -2,24 +2,25 @@ import React, { useRef } from "react";
 import Keyboard from "react-simple-keyboard";
 import "react-simple-keyboard/build/css/index.css";
 
-export default function KeyboardDisplay({guessState, setGuessState, answerState, setAnswerState}) {
+export default function KeyboardDisplay({cardRenderState, setCardRenderState, guessedWord, setguessedWord, attemptNumberState, setAttemptNumberState}) {
 
   const keyboard = useRef();
 
-  const onChange = (guessState) => {
-    console.log("Input changed", guessState);
-    setGuessState(guessState);
+  const onChange = (cardRenderState) => {
+    console.log("Input changed", cardRenderState);
+    setCardRenderState(cardRenderState);
   };
 
   const onKeyPress = (button) => {
     console.log("Button pressed", button);
-    if(button === "{enter}") handleEnter(guessState)
+    if(button === "{enter}") handleEnter(cardRenderState)
   };
 
   const handleEnter = (guess) => {
     if(guess.length < 5) return "guess must be 5 letters"
     console.log('guessed:', guess)
-    setAnswerState(...answerState, guess)
+    setguessedWord(...guessedWord, guess)
+    setAttemptNumberState(attemptNumberState++)
   }
 
   return (
